@@ -1,5 +1,5 @@
-const moreBtn = document.querySelector('.info .metadata .moreBtn');
-const title = document.querySelector('.info .metadata .title');
+const moreBtn = document.querySelector('.info .titleAndInfo .moreBtn');
+const title = document.querySelector('.info .titleAndInfo .title');
 
 
 moreBtn.addEventListener('click', () =>{

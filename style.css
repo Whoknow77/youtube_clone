@@ -17,229 +17,245 @@
     --font-large:18px;
     --font-medium:14px;
     --font-small:12px;
-    --font:micro:10px;
+    --font-micro:10px;
 }
 
 *{
-    padding:0;
     margin:0;
+    padding:0;
     box-sizing:border-box;
 }
-
 body{
     font-family:Roboto;
 }
 
 li{
-    list-style:none;
+    list-style: none;
 }
-
-button,
-button:focus{
-    background-color:white;
-    border:none;
-    cursor:pointer;
+button,button:focus{
     outline:none;
+    cursor:pointer;
+    background-color:var(--white-color);
+    border:none;
+
 }
 
 header{
-    display:flex;
-    justify-content: space-between ;
-    padding: var(--padding);
-    background-color:var(--black-color);
+    background-color: black;
     color:var(--white-color);
-}
-
-header .logo{
+    padding: var(--padding);
+    display:flex;
+    justify-content: space-between;
     font-size:var(--font-large);
 }
 
-header .logo i{
+header .title .fa-youtube{
     color:var(--red-color);
+    font-size:var(--font-large);
 }
 
-header .icons .fa-magnifying-glass{
+header .logo .fa-magnifying-glass{
     margin-right:var(--padding);
 }
-
-/* Video Player */
 
 .player{
     position:sticky;
     top:0;
-    background-color:black;
     text-align:center;
+    background-color: black;
 }
 
 .player video{
+
     width:100%;
     height:100%;
-    max-width:1000px;
+    max-width:768px;
 }
 
-body .infoAndUpNext > .info{
+.infoandupnext .info{
     padding:var(--padding);
+    margin-top:calc(var(--padding)/2);
 }
 
-.info .metadata .hashtags{
+.info .hashtags{
     display:flex;
     font-size:var(--font-small);
-    color:var(--blue-color);
+    color:blue;
 }
 
-.info .metadata .hashtags li{
-    margin-right:var(--padding);
+.info .hashtags span{
+    margin-right: var(--padding);
 }
 
-.info .metadata .titleAndButton{
-    display:flex;
-}
+.info .titleAndInfo{
+    display: flex;
 
-.info .metadata .titleAndButton .title{
-    font-size: var(--font-medium);
-    margin-right:var(--padding);
 }
+.info .titleAndInfo .title.clamp{
 
-.info .metadata .titleAndButton .title.clamp{
     display:-webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow:hidden;
 }
 
-.info .metadata .titleAndButton .moreBtn{
-    height:100%;
-    transition:transform 300ms ease-in-out
+.info .titleAndInfo .title{
+font-size:var(--font-medium);
+margin-right:var(--padding);
 }
 
-.info .metadata .titleAndButton .moreBtn.clicked{
-    transform:rotate(180deg); 
+
+.info .titleAndInfo .moreBtn{
+    height:100%;
+    transition:transform 300ms ease-in-out 
+
+}
+
+.info .titleAndInfo .moreBtn.clicked{
+    transform:rotate(180deg);
+    transition:transform 300ms ease-in-out 
+    
 }
 
 .info .views{
+    margin-top:calc(var(--padding)/2);
+    color:var(--grey-dark-color);
     font-size:var(--font-small);
+}
+
+.info .etc{
+    margin-top:var(--padding);
+    display: flex;
+    justify-content: space-around;
+    font-size:var(--font-medium);
+
+}
+
+.info .etc button{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     color:var(--grey-dark-color);
 }
 
-.info .actions{
-    display:flex;
-    justify-content: space-around;
-    margin:var(--padding) 0;
-}
-
-.info .actions button{
-    display:flex;
-    flex-direction: column;
-    font-size:var(--font-small);
-    color:var(--grey-dark-color)
-
-}
-
-.info .actions button i{
-    margin:0 auto;
+.info .etc i{
     margin-bottom:calc(var(--padding)/2);
-    font-size:16px;
+    font-size:var(--font-large);
 }
 
-.info .actions button i.active{
-    color:var(--blue-color);
+.info .etc i.active{
+    color:blue;
 }
 
-.info .channel{
-    display:flex;
-    justify-content: space-between;
+.info .etc span{
+    font-size:var(--font-small);
+}
+
+.subinfo{
     border-top:1px solid var(--grey-light-color);
     border-bottom:1px solid var(--grey-light-color);
-
-}
-
-.info .channel .metadata{
     display:flex;
-    align-items: center;
+    justify-content: space-between;
+    margin-top:var(--padding);
 }
 
-.info .channel .metadata .info{
-    display:flex;
-    flex-direction: column;
-}
-.info .channel .metadata img{
-    border-radius:50%;
+.subinfo img{
     width:var(--avatar-size);
     height:var(--avatar-size);
+    border-radius:50%;
 }
 
-.info .channel .metadata .info .name{
+.subinfo .information{
+    display:flex;
+}
+
+.subinfo .information .infoinfo{
+    display:flex;
+    flex-direction: column;
     font-size:var(--font-medium);
+    margin-left:calc(var(--padding)/2);
 }
 
-.info .channel .metadata .info .subscribers{
+.subinfo .information .infoinfo .subnum{
     font-size:var(--font-small);
     color:var(--grey-dark-color);
 }
 
-.info .channel .subscribe{
+.subinfo .subscribe{
+    color:red;
     text-transform: uppercase;
-    color:var(--red-color);
     font-size:var(--font-medium);
-}
 
+}
 .upnext{
-    padding: 0 var(--padding);
+    padding:var(--padding);
 }
 
 .upnext > .title{
     font-size:var(--font-medium);
     color:var(--grey-dark-color);
-    margin-bottom:calc(var(--padding)/2);
 }
 
-.upnext .item{
-    display:flex;
+
+.upnext .moreinfo{
     margin-top:var(--padding);
+    display:flex;
+    justify-content: space-between;
+    
 }
 
-.upnext .item .img{
-    flex:1 1 35%;
-    margin-right:var(--padding);
-
-}
-
-.upnext .item .info{
-    flex:1 1 60%;
-}
-
-.upnext .item .moreBtn{
-    flex:1 1 5%;
-}
-
-.upnext .item .img img{
-    width:100%;
-}
-/* 여기서 왜 이미지를 div태그의 img클래스로 감싸야만 하는걸까 */
-
-.upnext .item .info{
+.upnext .moreinfo .imginfo .title{
     display:flex;
     flex-direction: column;
 }
 
-.upnext .item .info .title{
+.upnext .moreinfo .imginfo{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.upnext .moreinfo .imginfo .imgtitle{
     font-size:var(--font-small);
 }
 
-.upnext .item .info .name,
-.upnext .item .info .views{
-    font-size:var(--font-small);
+.upnext .moreinfo .imginfo .imgname{
+    font-size:var(--font-micro);
     color:var(--grey-dark-color);
 }
 
-.infoAndUpNext{
+.upnext .moreinfo .imginfo .imgviews{
+    font-size:var(--font-micro);
+    color:var(--grey-dark-color);
+}
+
+.upnext .moreinfo .img{
+    flex:1 1 35%;
+    margin-right:var(--padding);
+}
+
+.upnext .moreinfo .imginfo{
+    flex:1 1 60%;
+}
+
+.upnext .moreinfo .imginfo .moreBtn{
+    flex:1 1 5%;
+}
+
+.upnext .moreinfo .img img{
+    width:100%;
+}
+
+.infoandupnext{
     display:flex;
     flex-direction: column;
 }
 
 @media screen and (min-width: 768px){
-    .infoAndUpNext{
+    .infoandupnext{
         flex-direction:row;
-        margin:var(--padding) 0;
+        /* margin:var(--padding) 0; */
     }
 }
+
+
