@@ -4,4 +4,4 @@
 
 <img src="https://ifh.cc/g/2TjZRG.jpg">
 
-## 링크 : http://127.0.0.1:5500/project/youtube_clone/index.html
+## 링크 : file:///C:/Users/gnsdh/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/project/youtube_clone2/index.html
